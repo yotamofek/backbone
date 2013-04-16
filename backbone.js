@@ -859,7 +859,7 @@
         if (success) success(collection, resp, options);
         collection.trigger('sync', collection, resp, options);
       };
-      _.extend( ( options.data = options.data || {} ), this.defaultData );
+      _.defaults( ( options.data = options.data || {} ), this.defaultData );
       wrapError(this, options);
       return this.sync('read', this, options);
     },
